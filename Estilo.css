@@ -8,19 +8,14 @@ color:#00FF00;
 background:black;
 }
 
-h1{
+#H1{
 text-shadow:2px 1px 1px red;
+font-size:30px;
 width:100%;
 }
 
-a:visited,a:link{
-font-size:20px;
-color:#00FF00;
-text-decoration:none;
-}
+li{font-family:20CentsMarker;}
+a:visited,a:link{font-size:20px;color:#00FF00;text-decoration:none;}
+a:hover,a:active{font-size:21px;color:#00FF00;text-decoration:none;}
 
-a:hover,a:active{
-font-size:23px;
-color:#00FF00;
-text-decoration:none;
-}
+.dld{}
