@@ -1,4 +1,5 @@
 @font-face{font-family:Comic;src:url(ComicSansMS.ttf);}
 *{font-family:"Comic Sans MS",Comic;color:#00FF00;background:black;}
-#H1{text-shadow:2px 1px 1px red;font-size:30px;width:100%;}
+#H1{text-shadow:2px 1px 1px red;font-size:30px;}
 a:visited,a:link,a:hover,a:active{font-size:20px;color:#00FF00;text-decoration:none;}
+li{text-align:center;}
