@@ -1,0 +1,26 @@
+<!-- Lista com todos os posts do blog by Elaine Gaspareto-->
+<script type="text/javascript">
+function getYpipeTL(feed) {
+ document.write('<ul style="font-weight:bold">');
+ var i;
+ for (i = 0; i < feed.count ; i++)
+ {
+var href = "'" + feed.value.items[i].link + "'";
+var pTitle = feed.value.items[i].title;
+var pComment = " \(" + feed.value.items[i].commentcount + " comentários\)";
+var pList = "<li>" + "<a href="+ href + '" target="_blank">' + pTitle;
+ document.write(pList);
+ document.write(pComment); //to remove comment count delete this line
+ document.write('</a></li>');
+ }
+ document.write('</ul>');
+ }
+ </script>
+ <script src="http://pipes.yahoo.com/pipes/pipe.run?
+ YourBlogUrl=http://vidaruimdepobre.blogspot.com/
+ &Order=chrono
+ &_id=401e43055731c1a29f1e1d3eb5e8e13f
+ &_callback=getYpipeTL
+ &_render=json"
+type="text/javascript"></script>
+<!-- Final do código by Elaine Gaspareto --> 
