@@ -1,26 +1,127 @@
-<!-- Lista com todos os posts do blog by Elaine Gaspareto-->
+<style type="text/css">
+#tabbed-toc {
+margin:0 auto;
+background-color:#252524; /*cor de fundo dos marcadores*/
+-webkit-box-shadow:0 1px 3px rgba(0,0,0,.4);
+-moz-box-shadow:0 1px 3px rgba(0,0,0,.4);
+box-shadow:0 1px 3px rgba(0,0,0,.4);
+overflow:hidden;
+position:relative;}
+#tabbed-toc .loading {
+display:block;
+padding:5px 10px;
+font:normal bold 10px Arial,Sans-Serif;
+color:white;}
+#tabbed-toc ul,
+#tabbed-toc ol,
+#tabbed-toc li {
+margin:0 0;
+padding:0 0;
+list-style:none;}
+#tabbed-toc .toc-tabs {
+width:15%;
+float:left;}
+#tabbed-toc .toc-tabs li a {
+display:block;
+font:normal bold 10px/28px Arial,Sans-Serif;
+height:28px;
+overflow:hidden;
+text-overflow:ellipsis;
+color:#ccc; /* cor do link dos marcadores */
+text-transform:uppercase;
+text-decoration:none;
+padding:0 12px;
+cursor:pointer;}
+#tabbed-toc .toc-tabs li a:hover {
+background-color:#4B4B4B; /* cor de fundo dos marcadores em estado hover */
+color:white;} /* cor de fonte */
+#tabbed-toc .toc-tabs li a.active-tab {
+background-color:#ccc; /* background do primeiro marcador */
+color:white; /* cor da fonte do primeiro marcador */
+-webkit-box-shadow:-2px 2px 2px rgba(0,0,0,.5);
+-moz-box-shadow:-2px 2px 2px rgba(0,0,0,.5);
+box-shadow:-2px 2px 2px rgba(0,0,0,.5);
+position:relative;
+z-index:5;
+margin:0 -1px 0 0;}
+#tabbed-toc .toc-content,
+#tabbed-toc .divider-layer {
+width:85%;
+float:right;
+background-color:#ffffff; /* cor da separação entre as postagens */
+border-left:5px solid #ccc; /* cor e tipo de borda */
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;}
+#tabbed-toc .divider-layer {
+float:none;
+display:block;
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+-webkit-box-shadow:0 0 7px rgba(0,0,0,.7);
+-moz-box-shadow:0 0 7px rgba(0,0,0,.7);
+box-shadow:0 0 7px rgba(0,0,0,.7);}
+#tabbed-toc .panel {
+position:relative;
+z-index:5;
+font:normal normal 10px Arial,Sans-Serif;}
+#tabbed-toc .panel li a {
+display:block;
+position:relative;
+font-weight:bold;
+font-size:11px;
+color:#3A3A3A; /* cor do link das postagens */
+line-height:20px;
+height:20px;
+padding:0 12px;
+text-decoration:none;
+outline:none;
+overflow:hidden;}
+#tabbed-toc .panel li:nth-child(even) {
+background-color:#DFDDDD;} /* primeira cor de separação entre as postagens */
+#tabbed-toc .panel li:nth-child(even) {
+}
+#tabbed-toc .panel li a:hover,
+#tabbed-toc .panel li a:focus,
+#tabbed-toc .panel li.bold a {
+background-color:#333; /* cor de fundo das postagens */
+color:white; /* cor da fonte */
+outline:none;}
+@media (max-width:700px) {
+#tabbed-toc .toc-tabs,
+#tabbed-toc .toc-content {
+overflow:hidden;
+width:auto;
+float:none;
+display:block;}
+#tabbed-toc .toc-tabs li {
+display:inline;
+float:left;}
+#tabbed-toc .toc-content {
+border:none;}
+#tabbed-toc .divider-layer,
+#tabbed-toc .panel li time {
+display:none;}}
+</style>
+<div id="tabbed-toc"><span class="loading">Carregando...
+</span>
+</div>
 <script type="text/javascript">
-function getYpipeTL(feed) {
- document.write('<ul style="font-weight:bold">');
- var i;
- for (i = 0; i < feed.count ; i++)
- {
-var href = "'" + feed.value.items[i].link + "'";
-var pTitle = feed.value.items[i].title;
-var pComment = " \(" + feed.value.items[i].commentcount + " comentários\)";
-var pList = "<li>" + "<a href="+ href + '" target="_blank">' + pTitle;
- document.write(pList);
- document.write(pComment); //to remove comment count delete this line
- document.write('</a></li>');
- }
- document.write('</ul>');
- }
- </script>
- <script src="http://pipes.yahoo.com/pipes/pipe.run?"
- YourBlogUrl="http://vidaruimdepobre.blogspot.com/"
- &Order=chrono
- &_id=401e43055731c1a29f1e1d3eb5e8e13f
- &_callback=getYpipeTL
- &_render=json"
-type="text/javascript"></script>
-<!-- Final do código by Elaine Gaspareto --> 
+var tabbedTOC = {
+blogUrl: "http://vidaruimdepobre.blogspot.com", /* url de seu blog */
+containerId: "tabbed-toc",
+activeTab: 1,//()
+showDates:false,
+numChars: 200,
+newTabLink: true,
+maxResults: 99999,
+preload: 0,
+sortAlphabetically: false,
+showNew: 5,
+newText: " - <em style='color:red;'>Novo!</em>"
+};
+</script>
+<script src='https://googledrive.com/host/0BwZ7Sm1QQc1lTnlVZG1DS3V0N3c/indice.js
+' type='text/javascript'></script>
