@@ -57,11 +57,13 @@ function convert(){
     
     keysSorted = Object.keys(words).sort(function(a,b){return words[b]-words[a]});
 	/*document.write(keysSorted);*/
+	
+	var janela = window.open("","_self");
     
-    document.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><table class="table table-striped"><thead><tr><th>Palavras</th><th>Ocorrências</th></tr></thead><tbody>');
+    janela.document.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><table class="table table-striped"><thead><tr><th>Palavras</th><th>Ocorrências</th></tr></thead><tbody>');
     
     for(i=0;i<tamanho;i++){
-    	document.write("<tr><td>"+keysSorted[i]+"</td><td> "+words[keysSorted[i]]+"</td></tr>");
+    	janela.document.write("<tr><td>"+keysSorted[i]+"</td><td> "+words[keysSorted[i]]+"</td></tr>");
     }
 }
 </script>
