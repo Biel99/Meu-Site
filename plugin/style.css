@@ -1,9 +1,18 @@
 @media screen and (max-width:720px) {
   p{
     padding:0 0 0.8em 0;
-    text-indent:1.5em;
-    margin:0 5%;
+    text-indent:1em;
+    margin:0 3.5%;
     text-align:justify;
+  }
+  img{
+    max-width:40%;
+    display:block;
+    margin-top:1em;
+    margin-bottom:1em;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid #021a40;
   }
 }
 
