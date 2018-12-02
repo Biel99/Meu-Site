@@ -1,5 +1,5 @@
 @media screen and (max-width:720px) {
-  body{
+  /*body{
     background-color:#f9f9f9;
     font: 1em Georgia,Arial;
     margin:0;
@@ -7,8 +7,8 @@
   p{
     text-indent:0.5em;
     text-align:justify;
-  }
-  img, img.redimensionar{
+  }*/
+  img{
     max-width:65%;
     display:block;
     margin-top:1em;
