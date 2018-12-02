@@ -7,7 +7,7 @@
   p{
     padding:0;
     text-indent:0.5em;
-    margin:0 1% 0 0;
+    margin:0;
     text-align:justify;
   }
   img{
@@ -18,6 +18,19 @@
     margin-left:auto;
     margin-right:auto;
     border:1px solid #021a40;
+  }
+  h1{
+    max-width:100%;
+    padding-bottom:0.8em;
+    text-align:center;
+    text-shadow: 1px 1px #cae1e3;
+  }
+
+  h2{
+    max-width:100%;
+    text-align:left;
+    margin-left:15%;
+    text-shadow: 1px 1px #cae1e3;
   }
 }
 
