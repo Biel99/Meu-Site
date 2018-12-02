@@ -6,10 +6,9 @@
   }
   p{
     text-indent:0.5em;
-    margin:0 auto;
     text-align:justify;
   }
-  img{
+  img, img.redimensionar{
     max-width:65%;
     display:block;
     margin-top:1em;
