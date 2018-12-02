@@ -1,17 +1,17 @@
 @media screen and (max-width:720px) {
   body{
   background-color:#f9f9f9;
-  font: 1.05em Georgia,Arial;
+  font: 1em Georgia,Arial;
   margin:0;
   }
   p{
-    padding:0 0 0.7em 0;
+    padding:0;
     text-indent:0.5em;
-    margin:0 1.5%;
+    margin:0 1% 0 0;
     text-align:justify;
   }
   img{
-    max-width:50%;
+    max-width:55%;
     display:block;
     margin-top:1em;
     margin-bottom:1em;
