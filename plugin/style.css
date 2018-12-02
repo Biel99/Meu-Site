@@ -1,36 +1,22 @@
 @media screen and (max-width:720px) {
   body{
-  background-color:#f9f9f9;
-  font: 1em Georgia,Arial;
-  margin:0;
+    background-color:#f9f9f9;
+    font: 1em Georgia,Arial;
+    margin:0;
   }
   p{
-    padding:0;
     text-indent:0.5em;
-    margin:0;
+    margin:0 auto;
     text-align:justify;
   }
   img{
-    max-width:55%;
+    max-width:65%;
     display:block;
     margin-top:1em;
     margin-bottom:1em;
     margin-left:auto;
     margin-right:auto;
     border:1px solid #021a40;
-  }
-  h1{
-    max-width:100%;
-    padding-bottom:0.8em;
-    text-align:center;
-    text-shadow: 1px 1px #cae1e3;
-  }
-
-  h2{
-    max-width:100%;
-    text-align:left;
-    margin-left:15%;
-    text-shadow: 1px 1px #cae1e3;
   }
 }
 
