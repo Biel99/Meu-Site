@@ -1,33 +1,34 @@
 
+<title>Word Counter - by christo</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Contador de Palavras</a>
-    </div>
-	<ul class="nav navbar-nav">
-      <li><a class="active" href="#">by gabriel</a></li>
-	</ul>
-	</div>
-</nav>
+<style>
+textarea{
+    max-width:100%;
+	max-height:100%;
+}
 
-<div class="container">
-<form class="form-inline">
-<div class="form-group">
-    <label for="texto">Texto: </label>
-	<input type="textarea" class="form-control" id="texto"/>
-</div>
-	<button type="submit" class="btn btn-success" onClick="convert()">Confirmar</button>
-</form>
-</div>
+div.footer{
+	position:absolute;
+	bottom:0;
+	padding:0.5em 0;
+	width:100%;
+	background-color:black;
+	text-align:center;
+}
 
-<div id="tabela">
-</div>
+span.texto_footer{
+  font-size:1em;
+  color:gray;
+}
+
+</style>
 
 <script>
 function convert(){
@@ -39,10 +40,10 @@ function convert(){
 
 	var tamanho=0;
 	var words = {};
-	var arr = document.getElementById("texto").value.toLowerCase().split(/[ ,.-;?:!]+/).filter(Boolean);
-    
+	var arr = document.getElementById("texto").value.toLowerCase().split(/[ ,\[\].-;—\"\'»?:!]+/).filter(Boolean);
+
     /*split(/\s+/);*/
-    
+
 	for (var i in arr){
     	var word = arr[i];
     	if(words[word] === undefined){
@@ -51,19 +52,57 @@ function convert(){
         }
     	words[word]++;
 	}
-    
+
     var keys = [];
 	for(var k in words) keys.push(k);
-    
+
     keysSorted = Object.keys(words).sort(function(a,b){return words[b]-words[a]});
 	/*document.write(keysSorted);*/
-	
-	var janela = window.open("","_self");
-    
+
+	var janela = window.open("","_blank");
+
+	janela.document.write("<h2 align='center'>Result</h1><h4 align='center'>"+tamanho+" odd-words</h4><br>");
     janela.document.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><table class="table table-striped"><thead><tr><th>Palavras</th><th>Ocorrências</th></tr></thead><tbody>');
-    
+
+	<!-- https://translate.google.com.br/?hl=pt-BR#view=home&op=translate&sl=auto&tl=pt&text=contador%20de%20palavras -->
+	
     for(i=0;i<tamanho;i++){
-    	janela.document.write("<tr><td>"+keysSorted[i]+"</td><td> "+words[keysSorted[i]]+"</td></tr>");
+    	janela.document.write("<title>Word Counter - Result</title><tr><td><a target='_blank' href='https://translate.google.com.br/?hl=pt-BR#view=home&op=translate&sl=auto&tl=pt&text="+keysSorted[i]+"'>"+keysSorted[i]+"</a></td><td> "+words[keysSorted[i]]+"</td></tr>");
     }
 }
 </script>
+
+
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Word Counter</a>
+    </div>
+	<ul class="nav navbar-nav">
+      <li><a class="active" href="#">by christo</a></li>
+	</ul>
+	</div>
+</nav>
+
+<div class="container">
+<form class="form-inline">
+<div class="form-group">
+    <label for="texto">Texto: </label>
+	
+	<textarea placeholder="Texto" class="form-control" id="texto"></textarea>
+	<!-- class="form-control" -->
+
+</div>
+	<button type="submit" class="btn btn-success" onClick="convert()">Confirmar</button>
+</form>
+</div>
+
+<div id="tabela"></div>
+
+<div class="footer">
+  <span class="texto_footer">© 2018 Copyright: Gabriel Christo</span>
+</div>
+
+
